@@ -70,3 +70,24 @@ topContent.children[1].children[1].textContent = siteContent['main-content']['ab
 
 // bottom content
 const bottomContent = document.querySelector('.bottom-content')
+const h4sBottom = bottomContent.querySelectorAll('h4')
+h4sBottom[0].textContent = siteContent['main-content'][services-h4]
+h4sBottom[1].textContent = siteContent['main-content'][product-h4]
+h4sBottom[2].textContent = siteContent['main-content'][vision-h4]
+const psBottom = document.querySelectorAll('p')
+psBottom[0].textContent = siteContent['main-content'][services-p]
+psBottom[1].textContent = siteContent['main-content'][product-p]
+psBottom[2].textContent = siteContent['main-content'][vision-p]
+
+//cta
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+//nav links
+const navLinks = document.querySelectorAll('header nav a')
+const navLinkTexts = Object.values('sitContent.nav')
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinkTexts[idx]
+  link.classList.add('i')
+})
+
