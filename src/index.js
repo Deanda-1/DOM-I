@@ -85,9 +85,8 @@ document.querySelector('.cta .cta-text button').textContent = siteContent.cta.bu
 
 //nav links
 const navLinks = document.querySelectorAll('header nav a')
-const navLinkTexts = Object.values('siteContent.nav')
+const navLinkTexts = Object.values(siteContent.nav)
 navLinks.forEach((link, idx) => {
   link.textContent = navLinkTexts[idx]
   link.classList.add('italic')
 })
-
